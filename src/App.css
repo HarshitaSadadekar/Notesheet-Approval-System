@@ -1,0 +1,64 @@
+body, html, #root, .app, .container {
+    width: 100%;
+    height: 100%;
+    background: url(../public/Login_Img.jpeg);
+    overflow: hidden;
+    background-size:cover;
+  }
+  
+  .container {
+    font-size: 28px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loginForm {
+   background: #ffffff9a;
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 400px;
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+  
+  .inputField {
+   padding-top: 16px;
+  }
+  
+  .input {
+   box-sizing: border-box;
+   outline: none;
+   border: solid 2px #000;
+   border-radius: 4px;
+   color: #292929;
+   width: 100%;
+   padding: 12px;
+   font-size: 14px;
+   background: rgba(255, 255, 255, 1);
+  }
+  
+  .submitButton {
+   padding-top: 16px;
+  }
+  
+  
+  .btn {
+   width: 100%;
+   min-width: 280px;
+   color: #000;
+   padding: 12px;
+   font-size: 14px;
+   font-weight: bold;
+   border: solid 2px #000;
+   border-radius: 4px;
+   background: #fff;
+   cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #ca4b0b;
+    border: #ca4b0b;
+  }
+  
