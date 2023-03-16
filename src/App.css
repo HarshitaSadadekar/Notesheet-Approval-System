@@ -1,7 +1,7 @@
 body, html, #root, .app, .container {
     width: 100%;
     height: 100%;
-    background: url(../public/Login_Img.jpeg);
+    /*background: url(../public/Login_Img.jpeg);*/
 
     background-size:cover;
     overflow: auto;
@@ -14,6 +14,7 @@ body, html, #root, .app, .container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: auto;
   }
   
   .loginForm {

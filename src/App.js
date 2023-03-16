@@ -88,7 +88,7 @@ class App extends React.Component {
 
     return (
       <div className='container'>
-        <Dashboard />
+        <Dashboard/>
       </div>
     );
   }

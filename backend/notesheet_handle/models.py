@@ -10,7 +10,6 @@ class FacultyDetails(models.Model):
 class NoteSheet(models.Model):
     f_id = models.ForeignKey(
         FacultyDetails, on_delete=models.SET_NULL, null=True)
-    id = models.IntegerField(primary_key=True)
     date = models.DateTimeField(auto_now_add=True)
     school = models.CharField(max_length=100)
     subject = models.TextField()
