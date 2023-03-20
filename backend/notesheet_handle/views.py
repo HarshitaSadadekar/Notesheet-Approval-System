@@ -15,3 +15,19 @@ class NoteSheetViewSet(viewsets.ModelViewSet):
 #     # class NoteSheetViewSet(generics.ListCreateAPIView):
 #     queryset = NoteSheet.objects.all()
 #     serializer_class = NoteSheetSerializer
+
+
+
+
+
+#  note sheet data ->> page/ist.js
+
+#                      2 dataBases
+
+#                           |
+#                           |
+#                           |
+#        |                                   |
+#  falculty id,                  notesheet (faculty foreign)
+
+#  faculty --> makes notesheet 
