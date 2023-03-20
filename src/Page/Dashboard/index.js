@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, {useState, useEffect} from 'react'
 import Swal from 'sweetalert2';
 import Header from './Header';
 import List from './List';
 import Create from './Create';
 import Approve from './Approve';
+// import API from "../../API";
 
-import { facultyData } from '../../data';
+import {facultyData} from '../../data';
 
-function Dashboard(){
+function Dashboard() {
 
     const [faculty, setFaculty] = useState(facultyData);
     const [isCreating, setIsCreating] = useState(false);
@@ -25,7 +26,7 @@ function Dashboard(){
             confirmButtonText: 'Yes, Approve it!',
             cancelButtonText: 'No, cancel!',
         }).then(result => {
-            if(result.value){
+            if (result.value) {
                 // Enter Code
                 Swal.fire({
                     icon: 'success',
@@ -47,7 +48,7 @@ function Dashboard(){
             confirmButtonText: 'Yes, Reject it!',
             cancelButtonText: 'No, cancel!',
         }).then(result => {
-            if(result.value){
+            if (result.value) {
                 // Enter Code
                 Swal.fire({
                     icon: 'success',
@@ -69,7 +70,7 @@ function Dashboard(){
             confirmButtonText: 'Yes, Review it!',
             cancelButtonText: 'No, cancel!',
         }).then(result => {
-            if(result.value){
+            if (result.value) {
                 // Enter Code
                 Swal.fire({
                     icon: 'success',
@@ -91,7 +92,7 @@ function Dashboard(){
             confirmButtonText: 'Yes, Forward it!',
             cancelButtonText: 'No, cancel!',
         }).then(result => {
-            if(result.value){
+            if (result.value) {
                 // Enter Code
                 Swal.fire({
                     icon: 'success',
@@ -104,22 +105,33 @@ function Dashboard(){
             }
         });
     }
-
+    // useEffect(() => {
+    //     refreshList();
+    // }, []);
+    //
+    //
+    // const refreshList = () => {
+    //     API.get("/notesheet")
+    //         .then((res) => {
+    //             setFaculty(res.data);
+    //         })
+    //         .catch(console.error)
+    // }
 
     return (
         <div className='container'>
-        {/* List */}
-           {!isCreating && (
-            <>
-                <Header setIsCreating={setIsCreating} />
-                <List faculty={faculty} />
-            </>
-           )}
+            {/* List */}
+            {!isCreating && (
+                <>
+                    <Header setIsCreating={setIsCreating}/>
+                    <List faculty={faculty}/>
+                </>
+            )}
 
-        {/* Create */}
-           {isCreating && (
-            <Create faculty={faculty} setFaculty={setFaculty} setIsCreating={setIsCreating} />
-           )} 
+            {/* Create */}
+            {isCreating && (
+                <Create faculty={faculty} setFaculty={setFaculty} setIsCreating={setIsCreating}/>
+            )}
         </div>
     )
 }

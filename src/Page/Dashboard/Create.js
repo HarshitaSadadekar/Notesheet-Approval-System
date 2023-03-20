@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+// import API from "../../API";
 
 function Create({ faculty, setFaculty, setIsCreating }){
 
