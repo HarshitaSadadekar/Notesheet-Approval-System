@@ -11,3 +11,7 @@ class NoteSheetViewSet(viewsets.ModelViewSet):
     # class NoteSheetViewSet(generics.ListCreateAPIView):
     queryset = NoteSheet.objects.all()
     serializer_class = NoteSheetSerializer
+# class NoteSheetViewSet1(viewsets.ModelViewSet):
+#     # class NoteSheetViewSet(generics.ListCreateAPIView):
+#     queryset = NoteSheet.objects.all()
+#     serializer_class = NoteSheetSerializer
