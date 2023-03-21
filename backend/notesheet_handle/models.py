@@ -11,9 +11,8 @@ class NoteSheet(models.Model):
     f_id = models.ForeignKey(
         FacultyDetails, on_delete=models.SET_NULL, null=True)
     date = models.DateTimeField(auto_now_add=True)
-    subject=models.TextField()
-    school = models.CharField(max_length=100)
     subject = models.TextField()
+    school = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
     description = models.TextField()
     objective = models.TextField()
