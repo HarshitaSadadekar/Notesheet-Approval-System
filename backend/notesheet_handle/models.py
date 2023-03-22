@@ -10,10 +10,9 @@ class FacultyDetails(models.Model):
 class NoteSheet(models.Model):
     f_id = models.ForeignKey(
         FacultyDetails, on_delete=models.SET_NULL, null=True)
-    id = models.IntegerField(primary_key=True)
     date = models.DateTimeField(auto_now_add=True)
-    school = models.CharField(max_length=100)
     subject = models.TextField()
+    school = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
     description = models.TextField()
     objective = models.TextField()
@@ -22,8 +21,9 @@ class NoteSheet(models.Model):
     proposal_submitted_by_1 = models.CharField(max_length=255)
     name_of_hod = models.CharField(max_length=255)
     name_of_director = models.CharField(max_length=255)
+    Status = models.IntegerField(default='000')
 
 
-class NoteSheetAdditional(models.Model):
-    f_id = models.ForeignKey(NoteSheet, on_delete=models.SET_NULL, null=True)
-    Status = models.IntegerField()
+# class NoteSheetAdditional(models.Model):
+#     f_id = models.ForeignKey(NoteSheet, on_delete=models.SET_NULL, null=True)
+#     Status = models.IntegerField()

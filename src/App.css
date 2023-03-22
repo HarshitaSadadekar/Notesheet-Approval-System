@@ -1,15 +1,16 @@
 body, html, #root, .app, .container {
     width: 100%;
     height: 100%;
-    background: url(../public/Login_Img.jpeg);
-    overflow: hidden;
+    /*background: url(../public/Login_Img.jpeg);*/
+
     background-size:cover;
+    overflow: auto;
   }
   
   .container {
     font-size: 28px;
     color: #000;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
