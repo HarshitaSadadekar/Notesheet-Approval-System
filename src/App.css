@@ -14,6 +14,7 @@ body, html, #root, .app, .container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: auto;
   }
   
   .loginForm {
