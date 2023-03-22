@@ -4,13 +4,13 @@ import Header from './Header';
 import List from './List';
 import Create from './Create';
 import Approve from './Approve';
-// import API from "../../API";
-
-import {facultyData} from '../../data';
+// import {facultyData} from '../../data';
+import instance from "../../axiosInstance";
 
 function Dashboard() {
 
-    const [faculty, setFaculty] = useState(facultyData);
+    const [faculty, setFaculty] = useState([])
+    const [noteSheetData, setNoteSheetData] = useState([])
     const [isCreating, setIsCreating] = useState(false);
     const [isApproving, setIsApproving] = useState(false);
     const [isRejecting, setIsRejecting] = useState(false);
@@ -105,19 +105,29 @@ function Dashboard() {
             }
         });
     }
-    // useEffect(() => {
-    //     refreshList();
-    // }, []);
-    //
-    //
-    // const refreshList = () => {
-    //     API.get("/notesheet")
-    //         .then((res) => {
-    //             setFaculty(res.data);
-    //         })
-    //         .catch(console.error)
-    // }
 
+    useEffect(() => {
+        instance
+            .get('/notesheet/')
+            .then(response => {
+                setNoteSheetData(response.data)
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }, []); // Empty dependency array to run only once on mount
+    console.log(noteSheetData,"hoho")
+    console.log(faculty, "hehe")
+    useEffect(()=>{
+        instance
+            .get('/faculty/')
+            .then(response=>{
+                setFaculty(response.data)
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+    })
     return (
         <div className='container'>
             {/* List */}

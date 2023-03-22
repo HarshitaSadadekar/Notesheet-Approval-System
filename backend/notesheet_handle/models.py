@@ -21,8 +21,9 @@ class NoteSheet(models.Model):
     proposal_submitted_by_1 = models.CharField(max_length=255)
     name_of_hod = models.CharField(max_length=255)
     name_of_director = models.CharField(max_length=255)
+    Status = models.IntegerField(default='000')
 
 
-class NoteSheetAdditional(models.Model):
-    f_id = models.ForeignKey(NoteSheet, on_delete=models.SET_NULL, null=True)
-    Status = models.IntegerField()
+# class NoteSheetAdditional(models.Model):
+#     f_id = models.ForeignKey(NoteSheet, on_delete=models.SET_NULL, null=True)
+#     Status = models.IntegerField()
