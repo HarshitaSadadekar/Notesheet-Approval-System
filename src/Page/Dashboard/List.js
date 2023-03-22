@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './tb.css'
 function List({ faculty }){
     return (
     <div className='contain-table'>
-        <table className='striped-table'>
+        <table className='table'>
             <thead>
                 <tr>
                 <th>No.</th>
@@ -45,5 +45,6 @@ function List({ faculty }){
     </div>
     )
 }
+
 
 export default List

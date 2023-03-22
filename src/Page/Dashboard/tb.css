@@ -1,0 +1,120 @@
+.contain-table table{
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    margin-top: 10px;
+    margin-bottom:10px;
+    align-items: flex-start;
+    margin-right: auto;
+    text-align:left;
+    width:100%;
+    display:inline-table;
+    overflow: auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    border-style: 2px solid rgba(255, 255, 255, 0.878);
+    overflow-x:hidden;
+}
+
+.contain-table{
+    align-items: flex-start;
+}
+
+.container,.small-container,.medium-container{
+    margin-left: 0;
+    margin-right: 0;
+    padding:15px;
+    width:100%;
+    
+}
+.button,
+.round-button{
+    background-color:#D3632E;
+    border-style: none;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+.round-button:hover,
+.button:hover{
+    background-color:#bd4208;
+    color:white;
+    border-style: none;
+    
+}
+
+button:focus{
+    background-color:#14b40c;
+    color:white;
+    border-style: none;
+}
+
+@media(max-width:845px){
+    .container{
+        width:100%;
+        padding:10px;
+        margin-right: 0;
+    }
+    .contain-table{
+        width:100%;
+        overflow-x: hidden;
+    }
+    .table{
+        width:90%;
+
+    }
+    .button,
+    td,
+    th{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:700px){
+    .container{
+        width:95%;
+        padding:7px;
+        margin-right: 0;
+        
+    }
+    .contain-table{
+        width:100%;
+        overflow-x: hidden;
+        
+    }
+    .table{
+        width:100%;
+        margin-right: 0;
+        
+    }
+   
+    th{
+        display:none;
+    }
+    td{
+        margin-right: 5px;
+        display: block;
+        justify-content: center;
+        overflow-y: auto;
+    }
+     td.text-right,
+    td.text-center,
+    td.text-left{
+        display:inline-block;
+        font-size: 15px;
+    }
+    td::before{
+        content:attr(th);
+    }
+}
+
+@media(max-width:500px){
+    td.text-right,
+    td.text-center,
+    td.text-left{
+        display:inline-block;
+        font-size: x-small;
+    }
+}
+
+
+
+

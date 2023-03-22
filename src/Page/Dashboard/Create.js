@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import './create.css';
 
 function Create({ faculty, setFaculty, setIsCreating }){
 
@@ -42,7 +43,7 @@ function Create({ faculty, setFaculty, setIsCreating }){
 
     return (
         <div className='container'>
-            <h1>Create Notesheet</h1>
+            <h1 class="header1">Create Notesheet</h1>
             <form onSubmit={handleCreate}>
                 <div className='input-box'>
                     <label htmlFor='date'>Date</label>
@@ -113,7 +114,7 @@ function Create({ faculty, setFaculty, setIsCreating }){
                     <label htmlFor="others">Others</label>
                 </div>
             </div>
-            <div>
+            <div class="buttons">
                 <input type="submit" value="Create" />
                 <input className="muted-button" type="button" value="Cancel" onClick={() => setIsCreating(false)} />
             </div>

@@ -1,0 +1,71 @@
+.input-box{
+    width:600px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.header1{
+    color:#D3632E;
+    margin-top: 0%;
+}
+
+.gender-option{
+    display: flex;
+    margin-bottom: 30px;
+}
+[type=checkbox]{
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.gender-option label{
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+}
+
+h3{
+    margin:0;
+    font-size: 20px;
+}
+
+.buttons [type=submit],
+.muted-button{
+    margin-right: 20px;
+    background-color: #D3632E;
+    border-style: none;
+    color: #ffffff;
+}
+
+.buttons [type=submit]:hover,
+.muted-button:hover{
+    background-color: #bd4208;
+    color: #ffffff;
+    border-style: none;
+}
+
+@media(max-width:700px){
+    
+    form{
+        width:100%;
+    }
+
+    .input-box,.input-box label,#date,.select-box,#sub,#desc,#obj{
+        width:100%;
+        margin-right:50%;
+    }
+    [type=checkbox]{
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+    .gender-option label{
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+    }
+}
+

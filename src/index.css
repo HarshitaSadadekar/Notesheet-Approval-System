@@ -20,6 +20,11 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
+ /* create separate css file for each class and change 
+ table and button- left align
+ buttons- size and color font: googlefonts
+  */
  html {
     line-height: 1.15;
     /* 1 */
@@ -558,7 +563,7 @@
   }
   
   .container, .small-container, .medium-container {
-    max-width: 1200px;
+    max-width: 100%;
     padding: 0 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -829,7 +834,7 @@
   a.accent-button:focus,
   a.accent-button:active {
     color: #ffffff;
-    border: 1px solid #1cb864;
+    border: 3px solid #1cb864;
     background: #1cb864;
   }
   
@@ -1012,6 +1017,7 @@
   
   .contain-table {
     overflow-x: auto;
+    width:100%;
   }
   
   @media (min-width: 600px) {
